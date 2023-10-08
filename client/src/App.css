@@ -1,0 +1,87 @@
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.main-head{
+  color: white;
+  font-family: monospace;
+  font-size: 4rem;
+  margin-bottom: 0;
+  
+}
+
+.sub-head{
+  margin-top: 0;
+  color: gray;
+  font-size: 1.5rem;
+}
+
+.url-box{
+  border: 0;
+  outline: none;
+  color: #282c34;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 6.5%;
+  padding: 5px 10px;
+  border-radius: 15px;
+
+}
+
+.dub-button{
+  position: relative;
+  margin: 5%;
+  border: 0;
+  width: 20%;
+  height: 6.5%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #4463ee;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
