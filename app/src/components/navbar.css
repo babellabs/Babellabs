@@ -1,0 +1,47 @@
+nav{
+    
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+
+.Logo-box{
+    color: white;
+    font-family: monospace;
+    font-size:2.5em;
+    padding-left: 20px;
+
+    /* padding-top: 30px;
+    padding-left: 5%; */
+    
+    
+}
+
+/* .wallet{
+    
+    
+    
+
+} */
+.wallet-btn{
+    position: relative;
+    margin: 5%;
+    background-color: white;
+    border: 0;
+    width: 10em;
+    height: 2em;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #4463ee;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.logo-sm{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}

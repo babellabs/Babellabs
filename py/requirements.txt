@@ -100,7 +100,7 @@ validators==0.22.0
 watchdog==3.0.0
 wcwidth==0.2.6
 websockets==11.0.3
-xerox==0.4.1
+# xerox==0.4.1
 xi==1.0
 yarl==1.9.2
 zipp==3.17.0

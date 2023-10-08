@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './App.css'
+import Navbar from './components/navbar';
 
 function App() {
   const [youtubeUrl, setYoutubeUrl] = useState('');
@@ -26,10 +28,14 @@ function App() {
   };
 
   return (
+    <div>
+      <Navbar />
     <div className="App">
-      <h1>Dub YouTube Videos</h1>
-      <input type="text" placeholder="Enter YouTube URL" value={youtubeUrl} onChange={handleUrlChange} />
-      <button onClick={handleDubVideo} disabled={loading}>
+      
+      <h1 className='main-head'>Dub Youtube Videos</h1>
+          <p className='sub-head'>Put the link of your yt video to dub</p>
+      <input className='url-box' type="text" placeholder="Enter YouTube URL" value={youtubeUrl} onChange={handleUrlChange} />
+      <button onClick={handleDubVideo} disabled={loading} className='dub-button'>
         {loading ? 'Dubbing...' : 'Dub Video'}
       </button>
       {dubbedVideo && (
@@ -40,6 +46,7 @@ function App() {
           </video>
         </div>
       )}
+    </div>
     </div>
   );
 }
