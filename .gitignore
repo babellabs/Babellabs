@@ -2,4 +2,4 @@ __pycache__
 venv
 node_modules
 readme.md
-```
+.vscode
