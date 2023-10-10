@@ -45,3 +45,12 @@ nav{
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
 }
+
+.accountContainer{
+    background-color: rgb(31, 38, 38);
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    
+    
+}
