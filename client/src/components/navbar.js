@@ -1,6 +1,7 @@
 import React from 'react'
 import './navbar.css'
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Navbar = () => {
 
@@ -68,12 +69,29 @@ const Navbar = () => {
     window.addEventListener('load', onLoad);
     return () => window.removeEventListener('load', onLoad);
   }, []);
+  const style ={
+    color:"white",
+    textDecoration:"none"
+  }
 
 
   return (
     <div >
       <nav>
-        <div className="Logo-box">BabelLabs<span className='logo-sm'>studio</span> </div>
+        <div className="Logo-box">
+          <Link to='/' style={style}>
+          BabelLabs<span className='logo-sm'>studio</span>
+          </Link>
+           </div>
+        <div className="links">
+          <div>
+             <Link to='/lip-sync' style={style}>Lipsync</Link> 
+            </div>
+          <div>
+             <Link to='/voice-clone' style={style}>VoiceClone</Link> 
+            </div>
+          
+        </div>
         
         <div className="wallet">
 

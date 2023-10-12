@@ -5,6 +5,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
+    height: 10vh;
     
 }
 
@@ -54,3 +55,32 @@ nav{
     
     
 }
+.links{
+    display: flex;
+    
+    
+}
+.links .Logo-box{
+    flex-basis: calc(100%/1.2);
+}
+.accountContainer{
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    .links{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    color: white;
+    font-family: monospace;
+    gap: 1rem;
+    font-size: 1.2em;
+    margin-top: 5px;
+    }
+    .Logo-box{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    
+  }

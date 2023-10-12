@@ -1,0 +1,82 @@
+.settings-container{
+    
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    display: block;
+    gap: 5rem;
+    margin-top: 2rem;
+    padding: 20px 0  ;
+    border-radius: 5px;
+    max-width: 40vw;
+    justify-content: center;
+    
+    
+}
+
+
+.settings-text{
+    
+    color: silver;
+    display: grid;
+    place-items: center;
+    width: 15vw;
+    border-right-style: solid;
+    border-right-color: white;
+    border-right-width: 1px;
+}
+
+.settings-options{
+    display: inline-flex;
+    gap: 2rem;
+    padding: 20px 0px;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .settings-options{
+        gap: 1em;
+        padding: 10px;
+    }
+    .settings-text{
+        font-size: medium;
+        padding-right: 10px;
+        
+    }
+    .settings-container{
+        width: 70vw;
+        max-width: 80vw;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .settings-options{
+        gap: 1em;
+        padding: 10px;
+    }
+    .settings-text{
+        font-size: medium;
+        padding-right: 10px;
+        
+    }
+    .settings-container{
+        width: 60vw;
+        max-width: 60vw;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .settings-options{
+        gap: 1em;
+        padding: 10px;
+    }
+    .settings-text{
+        font-size: small;
+        padding-right: 10px;
+        
+    }
+    .settings-container{
+        width: 80vw;
+        max-width: 80vw;
+    }
+  }

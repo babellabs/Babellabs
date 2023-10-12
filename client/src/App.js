@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css'
-import Navbar from './components/navbar';
 
+import Settings from './components/Settings';
 function App() {
   const [youtubeUrl, setYoutubeUrl] = useState('');
   const [dubbedVideo, setDubbedVideo] = useState('');
@@ -29,15 +29,19 @@ function App() {
 
   return (
     <div>
-      <Navbar />
-    <div className="App">
+      
+      <div className="container">
+          <div className="App">
+      
       
       <h1 className='main-head'>Dub Youtube Videos</h1>
           <p className='sub-head'>Effortlessly dub and sync videos in multiple languages.</p>
       <input className='url-box' type="text" placeholder="Enter YouTube URL" value={youtubeUrl} onChange={handleUrlChange} />
+      <Settings />
       <button onClick={handleDubVideo} disabled={loading} className='dub-button'>
         {loading ? 'Dubbing...' : 'Dub Video'}
       </button>
+      </div>
       {dubbedVideo && (
         <div>
           <h2>Dubbed Video</h2>
