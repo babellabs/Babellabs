@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const [walletAddress, setWalletAddress] = useState(null);
   const[account, setAccount] = useState(false);
-  const[publicKey, setPublicKey] = useState("");
+  let [publicKey, setPublicKey] = useState("");
   
 
   const checkIfWalletIsConnected = async () => {
@@ -14,6 +14,7 @@ const Navbar = () => {
       console.log('Phantom wallet found!');
       const response = await window.solana.connect({ onlyIfTrusted: true });
       const pk = response.publicKey.toString()
+      setPublicKey(publicKey => pk)
       
       console.log(
         'Connected with Public Key:',

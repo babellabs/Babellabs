@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       
       <h1 className='main-head'>Dub Youtube Videos</h1>
-          <p className='sub-head'>Put the link of your yt video to dub</p>
+          <p className='sub-head'>Effortlessly dub and sync videos in multiple languages.</p>
       <input className='url-box' type="text" placeholder="Enter YouTube URL" value={youtubeUrl} onChange={handleUrlChange} />
       <button onClick={handleDubVideo} disabled={loading} className='dub-button'>
         {loading ? 'Dubbing...' : 'Dub Video'}

@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: center;
   height: 90vh;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  
 }
 
 .App-logo {
@@ -56,7 +60,7 @@
 .sub-head{
   margin-top: 0;
   color: gray;
-  font-size: 1.5rem;
+  font-size: 1em;
 }
 
 .url-box{
