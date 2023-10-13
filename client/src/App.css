@@ -98,6 +98,23 @@
   
 
 }
+.dubbed-video h2{
+  display: flex;
+  justify-content: center;
+  color: silver;
+  font-family: monospace;
+  font-size: 2em;
+
+  
+}
+.dubbed-video .video-container{
+  display: flex;
+  justify-content: center;
+}
+
+.video{
+  width: 80%;
+}
 
 @media only screen and (max-width: 600px) {
   .main-head{
@@ -106,4 +123,21 @@
   .sub-head{
     font-size: 0.8rem;
   }
+}
+ 
+a{
+  text-decoration: none;
+  color: white;
+  font-family: monospace;
+}
+#space{
+  height: 20vh;
+}
+
+.render-model{
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  color: white;
+  font-size: 1.5em;
 }

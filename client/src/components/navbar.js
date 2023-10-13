@@ -2,13 +2,17 @@ import React from 'react'
 import './navbar.css'
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import useScreenSize from '../customHooks/useScreenSize';
 
 const Navbar = () => {
 
   const [walletAddress, setWalletAddress] = useState(null);
   const[account, setAccount] = useState(false);
   let [publicKey, setPublicKey] = useState("");
+  const[profile,setProfile] = useState("")
   
+
+  const screenSize = useScreenSize()
 
   const checkIfWalletIsConnected = async () => {
     if (window?.solana?.isPhantom) {
