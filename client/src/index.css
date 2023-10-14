@@ -9,6 +9,10 @@ body {
   place-items: center;
   background-color:#1a1a1a;
   
+  
+}
+html{
+  scroll-behavior: smooth;
 }
 
 code {

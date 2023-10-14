@@ -9,7 +9,7 @@ const Navbar = () => {
   const [walletAddress, setWalletAddress] = useState(null);
   const[account, setAccount] = useState(false);
   let [publicKey, setPublicKey] = useState("");
-  const[profile,setProfile] = useState("")
+  const [auth, setAuth] = useState(false)
   
 
   const screenSize = useScreenSize()
@@ -19,6 +19,7 @@ const Navbar = () => {
       console.log('Phantom wallet found!');
       const response = await window.solana.connect({ onlyIfTrusted: true });
       const pk = response.publicKey.toString()
+      setAuth(true)
       setPublicKey(publicKey => pk)
       
       console.log(
@@ -28,9 +29,7 @@ const Navbar = () => {
       setAccount(!account)
       
 
-      /*
-       * Set the user's publicKey in state to be used later!
-       */
+      
       setWalletAddress(response.publicKey.toString());
     } else {
       alert('Solana object not found! Get a Phantom Wallet 👻');
@@ -48,6 +47,7 @@ const Navbar = () => {
       const response = await solana.connect();
       console.log('Connected with Public Key:', response.publicKey.toString());
       setWalletAddress(response.publicKey.toString());
+      window.location.reload(false);
     }
 
   };

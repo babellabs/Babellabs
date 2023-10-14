@@ -1,0 +1,26 @@
+.not-connected-container{
+    display: block;
+    justify-content: center;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 10%;
+    color: white;
+}
+
+.nc-center{
+    height: 80vh;
+    display: grid;
+    place-items: center;
+}
+
+.not-connected-container h2{
+    display: flex;
+    justify-content: center;
+}
+
+.not-connected-container p{
+    display: flex;
+    justify-content: center;
+}

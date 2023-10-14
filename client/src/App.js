@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css'
+import NotConnected from './components/NotConnected';
 
 import Settings from './components/Settings';
 function App() {
@@ -11,6 +12,10 @@ function App() {
   const [shouldChangeText, setShouldChangeText] = useState(false)
   const [finish, setFinish] = useState(false)
   const [loadVideo, setLoadVideo] = useState(false)
+  const [walletAddress, setWalletAddress] = useState(null);
+  const[account, setAccount] = useState(false);
+  
+  
   const changeText = () =>{
     setShouldChangeText(true)
   }
@@ -65,12 +70,39 @@ function App() {
     }
     setLoading(false);
   };
-
-
-  return (
-    <div>
+  const checkIfWalletIsConnected = async () => {
+    if (window?.solana?.isPhantom) {
+      console.log('Phantom wallet found!');
+      const response = await window.solana.connect({ onlyIfTrusted: true });
+      const pk = response.publicKey.toString()
       
-      <div className="container">
+      
+      console.log(
+        'Connected with Public Key:',
+        pk
+      );
+      setAccount(!account)
+      
+  
+      
+      setWalletAddress(response.publicKey.toString());
+    } else {
+      alert('Solana object not found! Get a Phantom Wallet 👻');
+    }
+  };
+  
+  useEffect(() => {
+    const onLoad = async () => {
+      await checkIfWalletIsConnected();
+    };
+    window.addEventListener('load', onLoad);
+    return () => window.removeEventListener('load', onLoad);
+  }, []);
+
+  const renderTool = () =>{
+    return(
+      <div>
+         <div className="container">
           <div className="App">
       
       
@@ -107,6 +139,28 @@ function App() {
     <div id="space">
 
     </div>
+        
+      </div>
+    )
+  }
+
+  
+
+
+  return (
+    <div>
+      {account ?( 
+      <>
+       {renderTool()}
+      
+      </>
+      )
+      :
+      (
+          <NotConnected />
+      )
+      }
+      
     </div>
   );
 }
