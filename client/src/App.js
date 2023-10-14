@@ -33,7 +33,7 @@ function App() {
     const timeout = setTimeout(() => {
       setLoadVideo(true)
       
-    }, 2000);
+    }, 30000);
     return () => clearTimeout(timeout);
   }
   })
@@ -92,7 +92,7 @@ function App() {
         <div className='dubbed-video'>
           <h2>Dubbed Video</h2>
           <div className="video-container">
-            <video  className='video' controls>
+            <video src='/video.mp4' className='video' controls>
               <source src={dubbedVideo} type="video/mp4" />
             </video>
           </div>
