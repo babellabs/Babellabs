@@ -12,7 +12,13 @@ const Advanced = () => {
     const [options] = useState(data);
   return (
     <div>
-        <Multiselect options={options} displayValue='Feature' />
+        <Multiselect options={options} displayValue='Feature' style={{
+          chips: {
+            background: '#986EFF'
+          },
+          
+          
+        }} />
       
     </div>
   )

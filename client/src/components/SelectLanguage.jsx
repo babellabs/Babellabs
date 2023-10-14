@@ -28,8 +28,19 @@ const SelectLanguage = () => {
     const [options] = useState(data);
   return (
     <div>
-        <Multiselect options={options} displayValue='Language'  />
-      
+        
+        <Multiselect
+        displayValue="Language"
+        placeholder="Select Languages"
+        options={options}
+        style={{
+          chips: {
+            background: '#986EFF'
+          },
+          
+          
+        }}
+      />
     </div>
   )
 }
