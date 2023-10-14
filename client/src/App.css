@@ -6,12 +6,14 @@
   align-items: center;
   justify-content: center;
   height: 90vh;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 5px;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -56,7 +58,7 @@
 .sub-head{
   margin-top: 0;
   color: gray;
-  font-size: 1.5rem;
+  font-size: 1em;
 }
 
 .url-box{
@@ -78,10 +80,64 @@
   border: 0;
   width: 20%;
   height: 6.5%;
-  padding: 5px 10px;
+  padding: 5px ;
+  max-width: 200px;
+  
   border-radius: 10px;
-  background-color: #4463ee;
+  background-color: #986EFF;
   color: white;
   cursor: pointer;
   font-size: 15px;
+}
+
+.container{
+  display: inline;
+  justify-self: center;
+  width: 50vh;
+  padding-top: 20%;
+  
+
+}
+.dubbed-video h2{
+  display: flex;
+  justify-content: center;
+  color: silver;
+  font-family: monospace;
+  font-size: 2em;
+
+  
+}
+.dubbed-video .video-container{
+  display: flex;
+  justify-content: center;
+}
+
+.video{
+  width: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-head{
+    font-size: 3rem;
+  }
+  .sub-head{
+    font-size: 0.8rem;
+  }
+}
+ 
+a{
+  text-decoration: none;
+  color: white;
+  font-family: monospace;
+}
+#space{
+  height: 20vh;
+}
+
+.render-model{
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  color: white;
+  font-size: 1.5em;
 }

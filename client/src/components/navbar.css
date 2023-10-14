@@ -5,6 +5,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
+    height: 10vh;
     
 }
 
@@ -15,9 +16,7 @@ nav{
     padding-left: 20px;
 
     /* padding-top: 30px;
-    padding-left: 5%; */
-    
-    
+    padding-left: 5%; */  
 }
 
 /* .wallet{
@@ -45,3 +44,79 @@ nav{
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
 }
+
+.accountContainer{
+    background-color: rgb(31, 38, 38);
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;   
+}
+.links{
+    font-size: 1.5em;
+    display: flex;
+    gap: 2rem;
+    
+    
+    
+}
+.links .Logo-box{
+    flex-basis: calc(100%/1.2);
+}
+.accountContainer{
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    .links{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    color: white;
+    font-family: monospace;
+    gap: 1rem;
+    font-size: 1.2em;
+    margin-top: 5px;
+    }
+    .Logo-box{
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    .accountContainer{
+        background-color: rgb(31, 38, 38);
+        border-radius: 100px;
+        height: 40px;
+        width: 40px;   
+    }
+    .accountContainer img{
+        width: 40px;   
+    }
+    
+  }
+
+  @media only screen and (max-width: 450px) {
+    .links{
+
+    font-size: 0.7em;
+    margin-bottom: 2px;
+    
+    }
+    .Logo-box{
+        font-size: 0.8em;
+        font-weight: 700;
+    }
+    .logo-sm{
+        
+        font-size: .4em;
+    }
+    
+  }
+
+
+  @media only screen and (max-width: 900px) {
+    .links{
+
+        font-size: 1.3em;
+        margin-bottom: 2px;
+        
+        }
+  }
